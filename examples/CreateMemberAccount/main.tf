@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "organizations" {
-  source = "../..//"
+  source = "../../modules/account//"
 
   name  = ""
   email = ""
