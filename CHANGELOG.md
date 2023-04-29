@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v1.1.0...v2.0.0) (2023-04-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add module, and restructuring directory
+
+### Features
+
+* Add module, and restructuring directory ([10653d2](https://github.com/aws-ss/terraform-aws-organizations/commit/10653d27591bc8bd4af0592707c969af95189920))
+
 ## [1.1.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v1.0.0...v1.1.0) (2023-04-29)
 
 
