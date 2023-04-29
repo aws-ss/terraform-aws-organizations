@@ -19,7 +19,7 @@ A Terraform module that creates an AWS Organizations.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.65.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.65.0 |
 
 ## Modules
 
@@ -41,5 +41,14 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_aws_organizations_organization_accounts"></a> [aws\_organizations\_organization\_accounts](#output\_aws\_organizations\_organization\_accounts) | List of organization accounts including the master account. |
+| <a name="output_aws_organizations_organization_arn"></a> [aws\_organizations\_organization\_arn](#output\_aws\_organizations\_organization\_arn) | ARN of the organization |
+| <a name="output_aws_organizations_organization_id"></a> [aws\_organizations\_organization\_id](#output\_aws\_organizations\_organization\_id) | Identifier of the organization |
+| <a name="output_aws_organizations_organization_master_account_arn"></a> [aws\_organizations\_organization\_master\_account\_arn](#output\_aws\_organizations\_organization\_master\_account\_arn) | ARN of the master account |
+| <a name="output_aws_organizations_organization_master_account_email"></a> [aws\_organizations\_organization\_master\_account\_email](#output\_aws\_organizations\_organization\_master\_account\_email) | Email address of the master account |
+| <a name="output_aws_organizations_organization_master_account_id"></a> [aws\_organizations\_organization\_master\_account\_id](#output\_aws\_organizations\_organization\_master\_account\_id) | Identifier of the master account |
+| <a name="output_aws_organizations_organization_none_master_accounts"></a> [aws\_organizations\_organization\_none\_master\_accounts](#output\_aws\_organizations\_organization\_none\_master\_accounts) | List of organization accounts excluding the master account. |
+| <a name="output_aws_organizations_organization_roots"></a> [aws\_organizations\_organization\_roots](#output\_aws\_organizations\_organization\_roots) | List of organization roots. |
 <!-- END_TF_DOCS -->
