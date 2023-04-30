@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.0.0...v2.1.0) (2023-04-30)
+
+
+### Features
+
+* Support to create an organizational unit ([094e9d9](https://github.com/aws-ss/terraform-aws-organizations/commit/094e9d90ad336f09e256836049c9bee3191e9cf7))
+
 ## [2.0.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v1.1.0...v2.0.0) (2023-04-29)
 
 
