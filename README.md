@@ -7,6 +7,7 @@ A Terraform module that creates an AWS Organizations.
 - Create member account
 - Create organizational unit
 - Delegated Administrator
+- Manage an AWS Organizations policy
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
