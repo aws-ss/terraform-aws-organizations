@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.1.0...v2.2.0) (2023-05-06)
+
+
+### Features
+
+* Support to manage an AWS Organizations policy ([23e80a5](https://github.com/aws-ss/terraform-aws-organizations/commit/23e80a56f3fda3033136db7a9e0bd2b9433caca6))
+
 ## [2.1.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.0.0...v2.1.0) (2023-04-30)
 
 
