@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.2.0...v3.0.0) (2026-10-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Requires Terraform >= 1.5.0 and AWS provider >= 6.0.0.
+aws_service_access_principals now defaults to [], so trusted access for
+previously default services is disabled unless passed explicitly.
+Outputs are renamed from aws_organizations_organization_* to organization_*.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+### Features
+
+* Support AWS provider v6 ([32b76d6](https://github.com/aws-ss/terraform-aws-organizations/commit/32b76d66e5c27a8c910b569729ed8a45f76074f8))
+
 ## [2.2.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.1.0...v2.2.0) (2023-05-06)
 
 
