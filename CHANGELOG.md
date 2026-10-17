@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.1.0...v3.2.0) (2026-10-17)
+
+
+### Features
+
+* Rename organizational_unit module outputs and add validations ([bd69c4d](https://github.com/aws-ss/terraform-aws-organizations/commit/bd69c4ddad79cd19effcec09360fe2402bae12fe))
+
 ## [3.1.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.0.0...v3.1.0) (2026-10-17)
 
 
