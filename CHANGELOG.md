@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.2.0...v3.3.0) (2026-10-17)
+
+
+### Features
+
+* Rename delegated_administrator module outputs and add validation ([bf36d42](https://github.com/aws-ss/terraform-aws-organizations/commit/bf36d426d9b38998f8ce1ad9080006e857748621))
+
 ## [3.2.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.1.0...v3.2.0) (2026-10-17)
 
 
