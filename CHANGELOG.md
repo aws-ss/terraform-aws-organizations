@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.4.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.3.0...v3.4.0) (2026-10-17)
+
+
+### Features
+
+* **policy_attachment:** Add output and validations ([3d14a19](https://github.com/aws-ss/terraform-aws-organizations/commit/3d14a19bb241cf510fbd463b4bfec470c5cc4441))
+* **policy:** Rename outputs and add validations ([784b9bc](https://github.com/aws-ss/terraform-aws-organizations/commit/784b9bc0c427ac665d5b1dd36136113de7e6dfa6))
+* Support to manage a resource policy in Organizations ([498bc9e](https://github.com/aws-ss/terraform-aws-organizations/commit/498bc9e02fd5e1051f112d9ab384d05f1c609ca0))
+
 ## [3.3.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.2.0...v3.3.0) (2026-10-17)
 
 
