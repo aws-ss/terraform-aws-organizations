@@ -7,4 +7,17 @@ resource "aws_organizations_account" "this" {
   parent_id                  = var.parent_id
   role_name                  = var.role_name
   tags                       = var.tags
+
+  lifecycle {
+    # These arguments cannot be read from the Organizations API and changing them forces a new account.
+    ignore_changes = [
+      iam_user_access_to_billing,
+      role_name,
+    ]
+
+    precondition {
+      condition     = !(var.close_on_deletion && var.create_govcloud)
+      error_message = "close_on_deletion is not supported for GovCloud accounts."
+    }
+  }
 }
