@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.0.0...v3.1.0) (2026-10-17)
+
+
+### Features
+
+* Rename account module outputs and add lifecycle rules ([bfdc1da](https://github.com/aws-ss/terraform-aws-organizations/commit/bfdc1da521db2e32ffaa42ce67147640ccfbac9d))
+
 ## [3.0.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v2.2.0...v3.0.0) (2026-10-16)
 
 
