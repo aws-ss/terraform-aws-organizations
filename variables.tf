@@ -10,7 +10,7 @@ variable "aws_service_access_principals" {
 }
 
 variable "enabled_policy_types" {
-  description = "(Optional) List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. Valid values: `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `BEDROCK_POLICY`, `CHATBOT_POLICY`, `DECLARATIVE_POLICY_EC2`, `INSPECTOR_POLICY`, `RESOURCE_CONTROL_POLICY`, `S3_POLICY`, `SECURITYHUB_POLICY`, `SERVICE_CONTROL_POLICY`, `TAG_POLICY` and `UPGRADE_ROLLOUT_POLICY`. To enable `INSPECTOR_POLICY`, `aws_service_access_principals` must include `inspector2.amazonaws.com`. To enable `SECURITYHUB_POLICY`, `aws_service_access_principals` must include `securityhub.amazonaws.com`."
+  description = "(Optional) List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. Valid values: `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `BEDROCK_POLICY`, `CHATBOT_POLICY`, `DECLARATIVE_POLICY_EC2`, `GUARDDUTY_POLICY`, `INSPECTOR_POLICY`, `NETWORK_SECURITY_DIRECTOR_POLICY`, `RESOURCE_CONTROL_POLICY`, `S3_POLICY`, `SECURITYHUB_POLICY`, `SERVICE_CONTROL_POLICY`, `TAG_POLICY` and `UPGRADE_ROLLOUT_POLICY`. To enable `GUARDDUTY_POLICY`, `aws_service_access_principals` must include `guardduty.amazonaws.com`. To enable `INSPECTOR_POLICY`, `aws_service_access_principals` must include `inspector2.amazonaws.com`. To enable `SECURITYHUB_POLICY`, `aws_service_access_principals` must include `securityhub.amazonaws.com`."
   type        = list(string)
   default = [
     "SERVICE_CONTROL_POLICY",
@@ -26,7 +26,9 @@ variable "enabled_policy_types" {
       "BEDROCK_POLICY",
       "CHATBOT_POLICY",
       "DECLARATIVE_POLICY_EC2",
+      "GUARDDUTY_POLICY",
       "INSPECTOR_POLICY",
+      "NETWORK_SECURITY_DIRECTOR_POLICY",
       "RESOURCE_CONTROL_POLICY",
       "S3_POLICY",
       "SECURITYHUB_POLICY",
@@ -34,7 +36,7 @@ variable "enabled_policy_types" {
       "TAG_POLICY",
       "UPGRADE_ROLLOUT_POLICY",
     ], policy_type)])
-    error_message = "Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, BEDROCK_POLICY, CHATBOT_POLICY, DECLARATIVE_POLICY_EC2, INSPECTOR_POLICY, RESOURCE_CONTROL_POLICY, S3_POLICY, SECURITYHUB_POLICY, SERVICE_CONTROL_POLICY, TAG_POLICY or UPGRADE_ROLLOUT_POLICY."
+    error_message = "Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, BEDROCK_POLICY, CHATBOT_POLICY, DECLARATIVE_POLICY_EC2, GUARDDUTY_POLICY, INSPECTOR_POLICY, NETWORK_SECURITY_DIRECTOR_POLICY, RESOURCE_CONTROL_POLICY, S3_POLICY, SECURITYHUB_POLICY, SERVICE_CONTROL_POLICY, TAG_POLICY or UPGRADE_ROLLOUT_POLICY."
   }
 }
 

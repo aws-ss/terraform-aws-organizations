@@ -10,6 +10,10 @@ resource "aws_organizations_organization" "this" {
       error_message = "aws_service_access_principals and enabled_policy_types require feature_set to be ALL."
     }
     precondition {
+      condition     = !contains(var.enabled_policy_types, "GUARDDUTY_POLICY") || contains(var.aws_service_access_principals, "guardduty.amazonaws.com")
+      error_message = "To enable GUARDDUTY_POLICY, aws_service_access_principals must include guardduty.amazonaws.com."
+    }
+    precondition {
       condition     = !contains(var.enabled_policy_types, "INSPECTOR_POLICY") || contains(var.aws_service_access_principals, "inspector2.amazonaws.com")
       error_message = "To enable INSPECTOR_POLICY, aws_service_access_principals must include inspector2.amazonaws.com."
     }
