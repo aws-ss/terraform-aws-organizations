@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [3.4.1](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.4.0...v3.4.1) (2026-10-19)
+
+
+### Bug Fixes
+
+* Add missing policy types ([4d8029e](https://github.com/aws-ss/terraform-aws-organizations/commit/4d8029ef476a4f96679d115f17bbf1a25d62468d))
+
 ## [3.4.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.3.0...v3.4.0) (2026-10-17)
 
 
