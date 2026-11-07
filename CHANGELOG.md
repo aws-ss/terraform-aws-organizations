@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.5.0](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.4.1...v3.5.0) (2026-11-07)
+
+
+### Features
+
+* Require AWS provider >= 6.68.0 to support GUARDDUTY_POLICY ([5b8148b](https://github.com/aws-ss/terraform-aws-organizations/commit/5b8148b63351bd7d8c9f0a61f6a8b41fe5699ba8))
+
 ### [3.4.1](https://github.com/aws-ss/terraform-aws-organizations/compare/v3.4.0...v3.4.1) (2026-10-19)
 
 
