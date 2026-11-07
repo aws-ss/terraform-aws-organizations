@@ -7,7 +7,7 @@ module "organization" {
 
   aws_service_access_principals = [
     # "access-analyzer.amazonaws.com",
-    # "account.amazonaws.com",
+    "account.amazonaws.com",
     # "agent-registry.amazonaws.com",
     # "artifact.amazonaws.com",
     # "auditmanager.amazonaws.com",
@@ -57,7 +57,7 @@ module "organization" {
     # "tagpolicies.tag.amazonaws.com",
     # "wellarchitected.amazonaws.com",
   ]
-  enabled_policy_types = ["SERVICE_CONTROL_POLICY", "RESOURCE_CONTROL_POLICY"]
+  enabled_policy_types = ["SERVICE_CONTROL_POLICY", "GUARDDUTY_POLICY", "RESOURCE_CONTROL_POLICY"]
   feature_set          = "ALL"
 }
 
@@ -104,6 +104,8 @@ module "delegated_administrator" {
 
   account_id        = "123456789012"
   service_principal = "account.amazonaws.com"
+
+  depends_on = [module.organization]
 }
 
 data "aws_iam_policy_document" "scp_security" {
@@ -141,6 +143,8 @@ module "protect_security_services" {
   description = "Deny changes to security services except from the SecurityAdministrator role."
   content     = data.aws_iam_policy_document.scp_security.json
   type        = "SERVICE_CONTROL_POLICY"
+
+  depends_on = [module.organization]
 }
 
 module "protect_security_services_attachment" {
@@ -213,5 +217,36 @@ module "rcp_s3_bucket_attachment" {
   source = "../../modules/policy_attachment//"
 
   policy_id = module.rcp_s3_bucket.policy_id
+  target_id = module.organization.organization_roots[0].id
+}
+
+module "guardduty_policy" {
+  source = "../../modules/policy//"
+
+  name        = "GuardDutyEnablement"
+  description = "Enable GuardDuty foundational threat detection and S3 Protection in all Regions."
+  content = jsonencode({
+    guardduty = {
+      enablement = {
+        default = {
+          foundational = {
+            status = { "@@assign" = "enabled" }
+          }
+          s3_data_events = {
+            status = { "@@assign" = "enabled" }
+          }
+        }
+      }
+    }
+  })
+  type = "GUARDDUTY_POLICY"
+
+  depends_on = [module.organization]
+}
+
+module "guardduty_policy_attachment" {
+  source = "../../modules/policy_attachment//"
+
+  policy_id = module.guardduty_policy.policy_id
   target_id = module.organization.organization_roots[0].id
 }

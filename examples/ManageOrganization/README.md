@@ -1,6 +1,6 @@
 # Organization
 
-This example manages an AWS Organization with organizational units, member accounts, a delegated administrator, a service control policy and a resource control policy.
+This example manages an AWS Organization with organizational units, member accounts, a delegated administrator, a service control policy, a resource control policy and a GuardDuty policy.
 
 > **_NOTE:_** The list of `aws_service_access_principals` in this example is for reference only. Enabling trusted access allows the service to perform operations in all accounts of your organization, so keep only the services you need. See [AWS services that you can use with AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html) for the full list.
 >
@@ -9,6 +9,8 @@ This example manages an AWS Organization with organizational units, member accou
 > **_NOTE:_** `iam_user_access_to_billing` and `role_name` cannot be read from the Organizations API, so changes to them after the account is created are ignored. With `close_on_deletion = false`, `terraform destroy` only removes the account from the organization. See [Removing a member account from your organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html).
 
 > **_NOTE:_** Trusted access for the service must be enabled (`aws_service_access_principals`) before registering a delegated administrator. Services with their own delegated administrator API (e.g. GuardDuty, Security Hub, Macie, Inspector) should be configured with the service-specific resource instead. See [AWS services that you can use with AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html).
+
+> **_NOTE:_** `GUARDDUTY_POLICY` requires trusted access for `guardduty.amazonaws.com`. Once a GuardDuty policy is in effect, the Regional GuardDuty auto-enable settings no longer apply and per-account settings become read-only. See [GuardDuty policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_guardduty.html).
 
 ## Usage
 
